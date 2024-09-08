@@ -93,8 +93,7 @@ fun UserItem(user: User, onClick: () -> Unit) {
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp),
+                .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
@@ -104,14 +103,14 @@ fun UserItem(user: User, onClick: () -> Unit) {
                     .build(),
                 contentDescription = "User Avatar",
                 modifier = Modifier
-                    .size(60.dp)
+                    .size(120.dp)
                     .clip(RoundedCornerShape(8.dp)),
                 contentScale = ContentScale.Crop,
                 placeholder = painterResource(id = R.drawable.ic_people),
                 error = painterResource(id = R.drawable.ic_error)
             )
             Spacer(modifier = Modifier.width(16.dp))
-            Column {
+            Column(modifier = Modifier.padding(8.dp)) {
                 Text(text = user.name, style = MaterialTheme.typography.titleMedium)
                 Text(
                     text = user.createdAt,
