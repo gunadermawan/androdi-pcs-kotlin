@@ -5,7 +5,8 @@ Project for Technical Test role IT: Android Developer
 
 ## Demo APK
 
-Install latest version using release type on github repo
+Install latest version using release type on github repo 
+https://github.com/gunadermawan/androdi-pcs-kotlin/releases/tag/1.0.0
 
 ## Screenshots
 
