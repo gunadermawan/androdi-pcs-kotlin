@@ -18,12 +18,12 @@ class UserViewModel @Inject constructor(private val userRepository: UserReposito
     private val _uiState = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 
+    private val _selectedUser = MutableStateFlow<User?>(null)
+    val selectedUser: StateFlow<User?> = _selectedUser.asStateFlow()
+
     init {
         getUsers()
     }
-
-    private val _selectedUser = MutableStateFlow<User?>(null)
-    val selectedUser: StateFlow<User?> = _selectedUser.asStateFlow()
 
     fun selectUser(user: User) {
         _selectedUser.value = user
@@ -47,4 +47,3 @@ class UserViewModel @Inject constructor(private val userRepository: UserReposito
         val error: Throwable? = null
     )
 }
-
